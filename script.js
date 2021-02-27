@@ -1,15 +1,5 @@
 
-// Write password to the #password input
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
-  passwordText.value = password;
-};
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
-
-
-// creating the arrays for the variables
+// creating and defining my variables- let & const to hold my data
 
 let passLength = 0;
 let typeNumber = "false";
@@ -18,6 +8,15 @@ let typeLower = "false";
 let typeSpecial = "false";
 let newPassword = [];
 var generateBtn = document.querySelector("#generate");
+//write password to the #password input
+function writePassword() {
+    var password = generatePassword();
+    var passwordText = document.querySelector("#password");
+    passwordText.value = password;
+  };
+
+  // Add event listener to generate button
+generateBtn.addEventListener("click", writePassword);
 
 
 
