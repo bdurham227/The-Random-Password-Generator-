@@ -87,7 +87,7 @@ header {
   text-align: center;
   cursor: pointer;
 }
-
+/*created new class called button*/
 .button {
   border: none;
   background-color: hsl(360, 91%, 36%);
@@ -104,7 +104,7 @@ header {
   cursor: pointer;
 }
 
-
+/*created new id and styled */
 #copypass {
   float: right;
   background-color: grey;
