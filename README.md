@@ -30,7 +30,7 @@ Finally, the password will appear within the text box, and the user can then cop
 ​
 Live page view: 
 ​
-​![ScreenShot](assets/Images/GeneratorFullView.png?raw=true "ScreenShot")
+​![ScreenShot](assets\Images\generator.png?raw=true "ScreenShot")
 ​
 ​
 <a name="contrib"></a>
