@@ -24,15 +24,13 @@ Finally, the password will appear within the text box, and the user can then cop
 <a name="nav"></a>
 ## 2. Navigation
 ​
-[Github Pages Live Site] https://bdurham227.github.io/The-Random-Password-Generator-/   NEED TO EDIT THIS
+[Github Pages Live Site] https://bdurham227.github.io/The-Random-Password-Generator-/   
 ​
-[Github Repo Site] https://github.com/bdurham227/The-Random-Password-Generator-   NEED TO EDIT THIS
+[Github Repo Site] https://github.com/bdurham227/The-Random-Password-Generator-  
 ​
-Live page view:   NEED TO EDIT THE LINKS
+Live page view: 
 ​
-![Initialview](https://res.cloudinary.com/bizzaboprod/image/upload/q_auto:best,c_crop,g_custom/v1614453543/foaqtxtk8qs8cpzezqjo.png)
-​
-![Completedview](https://res.cloudinary.com/bizzaboprod/image/upload/q_auto:best,c_crop,g_custom/v1614453561/edtzxicz6vc880hctl9e.png)
+​![ScreenShot](assets/Images/GeneratorFullView.png?raw=true "ScreenShot")
 ​
 ​
 <a name="contrib"></a>
@@ -47,6 +45,5 @@ Jason Barbanel
 Takuya Matsumoto
 ​
 Gabe Thomas
-​
 ​
 Stephen Marsh
