@@ -32,29 +32,43 @@ var typeSpecial;
 
 
 
-    var passLength = prompt("password must be 8 to 128");
+    var passLength = prompt("What length would you like your password to be?(Choose between 8 and 128 characters");
     
     
-    
-    if (passLength <= 7 || passLength >= 129) {
-        alert("Please choose a length of at least 8 to 128 characters");
-        passLength = prompt("password must be 8 to 128");
-        typeUpper = confirm("ya want some uppers");
-        typeLower = confirm("ya want some lowers");
-        typeNumbers = confirm("how bout some numbas");
-        typeSpecial = confirm("are you special?");
+    while (isNaN(passLength) || passLength < 8 || passLength > 128) {
+        alert("We are still learning the powers to create passwords from nothing, in the mean time please select at least one: ");
+        passLength = prompt("What length would you like your password to be?(Choose between 8 and 128 characters");
+        if (passLength === null) {
+            break;
+        }
+    }
+
+
+
+
+
+
+   // if (passLength <= 7 || passLength >= 129) {
+       // alert("Please choose a length of at least 8 to 128 characters");
+       // passLength = prompt("password must be 8 to 128");
+       // typeUpper = confirm("ya want some uppers");
+       // typeLower = confirm("ya want some lowers");
+       // typeNumbers = confirm("how bout some numbas");
+      //  typeSpecial = confirm("are you special?");
         
-    }
-    if (passLength >= 8 && passLength  <= 128) {
-        typeUpper = confirm("ya want uppers");
-        typeLower = confirm("ya want lowers");
-        typeNumbers = confirm("how bout some numbers");
-        typeSpecial = confirm("are you special?");
-    }
-    //parseInt or isNaN
+   // }
+    //if (passLength >= 8 && passLength  <= 128) {
+       // typeUpper = confirm("ya want uppers");
+       // typeLower = confirm("ya want lowers");
+       // typeNumbers = confirm("how bout some numbers");
+      // typeSpecial = confirm("are you special?");
+    //}
+
+    
+
+
+    
     if (!typeUpper && !typeLower && !typeNumbers && !typeSpecial) {
-        alert("We are still learning the powers to create passwords from nothing, in the mean time please select at least one: "); 
-        prompt("password must be 8 to 128");
         typeUpper = confirm("ya want uppers");
         typeLower = confirm("ya want lowers");
         typeNumbers = confirm("how bout some numbas");
@@ -90,8 +104,6 @@ return result;
 }   
 
 
-  
-  
 
 function copyPass(){
 
