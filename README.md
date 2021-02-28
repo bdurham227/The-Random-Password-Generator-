@@ -31,6 +31,8 @@ Finally, the password will appear within the text box, and the user can then cop
 Live page view: 
 ​
 ​![ScreenShot](assets\Images\generator.png?raw=true "ScreenShot")
+
+Disclaimer: Visual Studio Code ReadMe preview displays the screenshot. If it does not, I apologize and also blame Visual Studio Code.
 ​
 ​
 <a name="contrib"></a>
