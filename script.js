@@ -37,7 +37,7 @@ var typeSpecial;
     
     
     if (passLength <= 7 || passLength >= 129) {
-        alert("password length must be this long");
+        alert("Please choose a length of at least 8 to 128 characters");
         passLength = prompt("password must be 8 to 128");
         typeUpper = confirm("ya want some uppers");
         typeLower = confirm("ya want some lowers");
@@ -48,12 +48,12 @@ var typeSpecial;
     if (passLength >= 8 && passLength  <= 128) {
         typeUpper = confirm("ya want uppers");
         typeLower = confirm("ya want lowers");
-        typeNumbers = confirm("how bout some numbas");
+        typeNumbers = confirm("how bout some numbers");
         typeSpecial = confirm("are you special?");
     }
     //parseInt or isNaN
     if (!typeUpper && !typeLower && !typeNumbers && !typeSpecial) {
-        alert("please choose at least one for your password"); 
+        alert("We are still learning the powers to create passwords from nothing, in the mean time please select at least one: "); 
         prompt("password must be 8 to 128");
         typeUpper = confirm("ya want uppers");
         typeLower = confirm("ya want lowers");
