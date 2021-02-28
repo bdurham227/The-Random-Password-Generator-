@@ -1,83 +1,103 @@
-
-// creating and defining my variables- let & const to hold my data
-
-let passLength = 0;
-let typeNumber = "false";
-let typeUpper = "false";
-let typeLower = "false";
-let typeSpecial = "false";
-let newPassword = [];
-let generateBtn = document.querySelector("#generate");
-let displayPasswordEl = document.querySelector("#placeholder");
-
-
-//write password to the #password input
 function writePassword() {
     var password = generatePassword();
     var passwordText = document.querySelector("#password");
     passwordText.value = password;
+    
   };
 
+  var generateBtn = document.querySelector("#generate");
+  generateBtn.addEventListener("click", writePassword);
 
 
-  //Add event listener to generate button
- generateBtn.addEventListener("click", function() {
-     getInput();
-     generateOptions();
-     generatePassword();
-     optionsArray = [];
- });
+// add parseInt
 
- 
+// creating and defining my variables & lt to hold my data
 
-const numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
-const special = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '{', '}', ':', '"', '<', '>', '?', '/', '"'];
-const lowercase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-const uppercase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
-const passwordArray = [];
+function generatePassword () {
 
-// function called getInput. Inside I just created similiar looking local variables to iniate a prompt statement to the user followed by four confirm statements
- function getInput() {
 
-    passLength = prompt("Please choose a length between 8 and 128 characters for your password: ");
+var numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+var special = ["@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "_", "=", "+"];
+var lowercase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+var uppercase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+var passwordArray = [];
+var result = [];
 
-    while (passLength <= 7 || passLength >= 129) {
-        alert("To ensure a secure password please input a length between 8 and 128 characters");
-        passLength = prompt("Please choose a length between 8 and 128 characters for your password: ");
+
+var passLength = "";
+var typeNumbers;
+var typeUpper;
+var typeLower;
+var typeSpecial;
+
+
+
+    var passLength = prompt("password must be 8 to 128");
+    
+    
+    
+    if (passLength <= 7 || passLength >= 129) {
+        alert("password length must be this long");
+        passLength = prompt("password must be 8 to 128");
+        typeUpper = confirm("ya want some uppers");
+        typeLower = confirm("ya want some lowers");
+        typeNumbers = confirm("how bout some numbas");
+        typeSpecial = confirm("are you special?");
+        
     }
-
-    if (passLength >= 8 && passLength <= 128) {
-     typeUpper = confirm("Would you like Uppercase letters in your password today?");
-     typeLower = confirm("Would you like Lowercase letters in your password today?");
-     typeNumber = confirm("Would you like numbers in your password today?");
-     typeSpecial = confirm("Would you like special characters in your password today?");
-
+    if (passLength >= 8 && passLength  <= 128) {
+        typeUpper = confirm("ya want uppers");
+        typeLower = confirm("ya want lowers");
+        typeNumbers = confirm("how bout some numbas");
+        typeSpecial = confirm("are you special?");
     }
- };
-
- let optionsArray = [];
-
- function generateOptions() {
-     if (typeUpper == true)
-     optionsArray = optionsArray.concat(uppercase);
-
-     if (typeLower == true)
-     optionsArray = optionsArray.concat(lowercase);
-
-     if (typeNumber == true)
-     optionsArray = optionsArray.concat(numbers);
-
-     if (typeSpecial == true)
-     optionsArray = optionsArray.concat(special);
- };
-
-function generatePassword() {
-    for (var i = 0; i < passLength; i++) {
-        newPassword += optionsArray[Math.floor(Math.random() * (optionsArray.length - 1))];
+    //parseInt or isNaN
+    if (!typeUpper && !typeLower && !typeNumbers && !typeSpecial) {
+        alert("please choose at least one for your password"); 
+        prompt("password must be 8 to 128");
+        typeUpper = confirm("ya want uppers");
+        typeLower = confirm("ya want lowers");
+        typeNumbers = confirm("how bout some numbas");
+        typeSpecial = confirm("are you special?");
+        
     }
-    displayPasswordEl.textContent = newPassword;
-};
-newPassword = [];
- 
+    
+    if (typeUpper == true) {
+        passwordArray = passwordArray.concat(uppercase);
+    }
+    
+    if (typeLower == true) {
+        passwordArray = passwordArray.concat(lowercase);
+    }
+    
+    if (typeNumbers == true) {
+    passwordArray = passwordArray.concat(numbers);
+    }
+    
+    if (typeSpecial == true) {
+    passwordArray = passwordArray.concat(special);
+    }
+    
 
- 
+
+
+
+for (var i = 0; i <= passLength; i++) {
+result = result + passwordArray[Math.floor(Math.random() * passwordArray.length)];
+}
+return result;
+
+}   
+
+
+  
+  
+
+function copyPass(){
+
+    document.querySelector("password").select();
+    document.execCommand("Copy");
+    alert("Password copied to clipboard!");
+}
+
+  
